@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.mstf.bean">
+
+	<class name="Info" table="mstf_info">
+		<id name="id">
+            <generator class="native"/>
+		</id>
+		<property name="name"/>
+		<property name="birthday"/>
+	  <set name="zuyuan" inverse="false" lazy="false">
+		  <key column="zzId"/>
+		 <one-to-many class="Zuyuan"/>
+	  </set>
+	</class>
+	
+	
+	
+</hibernate-mapping>
